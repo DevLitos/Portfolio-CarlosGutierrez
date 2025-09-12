@@ -1,6 +1,7 @@
-# ProyectoFinalAngular
+# Portfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+Simple personal project where I show my experience in the tech world, what I know and who I am.
 
 ## Development server
 

@@ -9,7 +9,10 @@
 # Node
 /node_modules
 npm-debug.log
-yarn-error.log
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # IDEs and editors
 .idea/
@@ -19,6 +22,11 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # Visual Studio Code
 .vscode/*
@@ -40,3 +48,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Environment files
+src/environments/*.local.ts
+.env
