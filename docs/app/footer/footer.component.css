@@ -1,0 +1,22 @@
+.footer {
+    position: flex;
+    bottom: 0;
+    width: 100%;
+    padding: 5%;
+    background: linear-gradient(135deg, #141414 0%, #010e2d 100%);
+    color: white;
+    font-family: Calibri;
+    border-top: 1px solid rgb(36, 36, 36);
+}
+
+.imgLogo {
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.footText {
+    color: white;
+    text-decoration: none;
+}

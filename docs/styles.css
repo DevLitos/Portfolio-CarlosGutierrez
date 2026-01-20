@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: Calibri;
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+    background: black;
+}
+body::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 10px;
+    border-right: 2px solid black;
+}
+html {
+  scroll-behavior: smooth;
+}
