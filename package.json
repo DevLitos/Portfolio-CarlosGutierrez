@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:Portfolio-CarlosGutierrez": "node dist/Portfolio-CarlosGutierrez/server/server.mjs",
-    "build:gh": "ng build --output-path docs --base-href /Portfolio-Project/ && xcopy /E /Y docs\\browser\\* docs\\ && rmdir /S /Q docs\\browser"
+    "build:gh": "ng build --configuration production --output-path docs --base-href /Portfolio-CarlosGutierrez/"
   },
   "private": true,
   "dependencies": {
