@@ -31,6 +31,7 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     InicioComponent,
+    LoaderComponent,
     PageNotFoundComponent,
     ProjectsComponent
   ],
@@ -47,5 +48,4 @@ const routes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
 
