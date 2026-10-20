@@ -12,8 +12,12 @@ export class LoaderService {
   private _hasAnimated = false;
   get hasAnimated(): boolean { return this._hasAnimated; }
 
+  private _isRevealed = false;
+  get isRevealed(): boolean { return this._isRevealed; }
+
   /** Called by LoaderComponent once the countdown finishes. */
   emitReveal(): void {
+    this._isRevealed = true;
     this._revealed.next();
     this._revealed.complete();
   }

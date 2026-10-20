@@ -1,17 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
-body{
-    font-family: Calibri;
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-ink: #080b12;
+  --color-night: #0d1422;
+  --color-panel: #111b2d;
+  --color-text: #f4f7fb;
+  --color-muted: #9ba8ba;
+  --color-accent: #6dd5fa;
+  --color-accent-strong: #2f9fe0;
+  --font-sans: 'Manrope', system-ui, sans-serif;
+  --font-mono: 'DM Mono', 'Courier New', monospace;
 }
 
-body::-webkit-scrollbar{
-    width: 10px;
-    background: black;
+* {
+  box-sizing: border-box;
 }
-body::-webkit-scrollbar-thumb{
-    background: white;
-    border-radius: 10px;
-    border-right: 2px solid black;
-}
+
 html {
   scroll-behavior: smooth;
+  background: var(--color-ink);
+}
+
+html.is-loading,
+body.is-loading {
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-ink);
+  color: var(--color-text);
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background: var(--color-ink);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 10px;
+  border-right: 2px solid var(--color-ink);
 }

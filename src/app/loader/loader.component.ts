@@ -29,6 +29,9 @@ export class LoaderComponent implements AfterViewInit, OnDestroy {
   ) {}
 
   ngAfterViewInit(): void {
+    document.documentElement.classList.add('is-loading');
+    document.body.classList.add('is-loading');
+
     const loader  = this.loaderEl?.nativeElement;
     const bar     = this.barEl?.nativeElement;
     const counter = this.counterEl?.nativeElement;
@@ -99,6 +102,8 @@ export class LoaderComponent implements AfterViewInit, OnDestroy {
     if (this.fallbackId) window.clearTimeout(this.fallbackId);
 
     document.documentElement.classList.add('is-loaded');
+    document.documentElement.classList.remove('is-loading');
+    document.body.classList.remove('is-loading');
     this.loaderService.emitReveal();
   }
 

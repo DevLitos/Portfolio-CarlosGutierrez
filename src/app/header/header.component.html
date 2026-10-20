@@ -1,44 +1,49 @@
-<nav class="navbar navbar-dark bg-black fixed-top">
+<nav class="navbar navbar-dark fixed-top portfolio-nav">
     <div class="container-fluid">
-        <button class="navbar-toggler me-auto border-0" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand ms-auto">
-            <img class="imgLogo" src="./assets/logoblancoresiz.png">
+        <a class="navbar-brand" href="#inicio_id" aria-label="Ir al inicio">
+            <span class="brand-mark">CGV</span>
         </a>
-        <div class="offcanvas offcanvas-start bg-black text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-            aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-body">
-                <ul class="navbar-nav flex-column">
-
-                    <li class="imgLogo">
-                        <img class="imgLogo" src="./assets/logoblancoresiz.png">
-                    </li>
-                    <br>
-                    <br>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#inicio_id" (click)="closeOffcanvas()"
-                            aria-current="page">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#timeline-btn" (click)="closeOffcanvas()">My journey</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tech_habilities_id" (click)="closeOffcanvas()">Tech abilities</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#beyond_code_id" (click)="closeOffcanvas()">Beyond code</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact_id" (click)="closeOffcanvas()">Contact me</a>
-                    </li>
-                    <li>
-                        <img src="." alt="" href="#">
-                        <img src="thumbnail_IMG-20231023-WA0229.jpg" alt="">
-                    </li>
-                </ul>
-            </div>
+        <div class="menu-content">
+            <span class="menu-label">MENU / 00</span>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="activeSection === 'inicio_id'" href="#inicio_id"
+                        [attr.aria-current]="activeSection === 'inicio_id' ? 'page' : null">
+                        <span>01</span> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="activeSection === 'projects_id'" href="#projects_id"
+                        [attr.aria-current]="activeSection === 'projects_id' ? 'page' : null">
+                        <span>02</span> Selected work
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="activeSection === 'timeline-btn'" href="#timeline-btn"
+                        [attr.aria-current]="activeSection === 'timeline-btn' ? 'page' : null">
+                        <span>03</span> My journey
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="activeSection === 'tech_habilities_id'" href="#tech_habilities_id"
+                        [attr.aria-current]="activeSection === 'tech_habilities_id' ? 'page' : null">
+                        <span>04</span> Tech abilities
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="activeSection === 'beyond_code_id'" href="#beyond_code_id"
+                        [attr.aria-current]="activeSection === 'beyond_code_id' ? 'page' : null">
+                        <span>05</span> Beyond code
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="activeSection === 'contact_id'" href="#contact_id"
+                        [attr.aria-current]="activeSection === 'contact_id' ? 'page' : null">
+                        <span>06</span> Contact me
+                    </a>
+                </li>
+            </ul>
         </div>
+        <p class="menu-footer">FULL STACK DEVELOPER<br>VALENCIA, ES</p>
     </div>
 </nav>
