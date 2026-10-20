@@ -4,46 +4,53 @@
             <span class="brand-mark">CGV</span>
         </a>
         <div class="menu-content">
-            <span class="menu-label">MENU / 00</span>
+            <span class="menu-label">{{ 'MENÚ / 00' | translate }}</span>
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" [class.active]="activeSection === 'inicio_id'" href="#inicio_id"
                         [attr.aria-current]="activeSection === 'inicio_id' ? 'page' : null">
-                        <span>01</span> Home
+                        <span>01</span> {{ 'Inicio' | translate }}
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" [class.active]="activeSection === 'projects_id'" href="#projects_id"
                         [attr.aria-current]="activeSection === 'projects_id' ? 'page' : null">
-                        <span>02</span> Selected work
+                        <span>02</span> {{ 'Proyectos' | translate }}
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" [class.active]="activeSection === 'timeline-btn'" href="#timeline-btn"
                         [attr.aria-current]="activeSection === 'timeline-btn' ? 'page' : null">
-                        <span>03</span> My journey
+                        <span>03</span> {{ 'Trayectoria' | translate }}
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" [class.active]="activeSection === 'tech_habilities_id'" href="#tech_habilities_id"
                         [attr.aria-current]="activeSection === 'tech_habilities_id' ? 'page' : null">
-                        <span>04</span> Tech abilities
+                        <span>04</span> {{ 'Habilidades' | translate }}
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" [class.active]="activeSection === 'beyond_code_id'" href="#beyond_code_id"
                         [attr.aria-current]="activeSection === 'beyond_code_id' ? 'page' : null">
-                        <span>05</span> Beyond code
+                        <span>05</span> {{ 'Más allá del código' | translate }}
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" [class.active]="activeSection === 'contact_id'" href="#contact_id"
                         [attr.aria-current]="activeSection === 'contact_id' ? 'page' : null">
-                        <span>06</span> Contact me
+                        <span>06</span> {{ 'Contacto' | translate }}
                     </a>
                 </li>
             </ul>
         </div>
-        <p class="menu-footer">FULL STACK DEVELOPER<br>VALENCIA, ES</p>
+        <p class="menu-footer">
+            <label class="language-toggle" [attr.aria-label]="language === 'es' ? 'Cambiar a inglés' : 'Cambiar a español'">
+                <input type="checkbox" [checked]="language === 'en'" (change)="toggleLanguage()">
+                <span class="language-slider" aria-hidden="true"></span>
+                <span class="language-code">{{ language === 'es' ? 'ES' : 'EN' }}</span>
+            </label>
+            <span>{{ 'DESARROLLADOR FULL STACK' | translate }}<br>{{ 'VALENCIA, ES' | translate }}</span>
+        </p>
     </div>
 </nav>

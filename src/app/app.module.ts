@@ -15,6 +15,7 @@ import { JourneyComponent } from './journey/journey.component';
 import { AbilitiesComponent } from './abilities/abilities.component';
 import { BeyondCodeComponent } from './beyond-code/beyond-code.component';
 import { ContactComponent } from './contact/contact.component';
+import { TranslatePipe } from './services/translate.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ContactComponent } from './contact/contact.component';
     JourneyComponent,
     AbilitiesComponent,
     BeyondCodeComponent,
-    ContactComponent
+    ContactComponent,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,

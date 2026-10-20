@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, HostListener, NgZone, OnDestroy } from '@angular/core';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,18 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
   private sections: HTMLElement[] = [];
   private initializationTimer?: ReturnType<typeof setTimeout>;
 
-  constructor(private ngZone: NgZone) {}
+  constructor(
+    private ngZone: NgZone,
+    private languageService: LanguageService
+  ) {}
+
+  get language(): 'es' | 'en' {
+    return this.languageService.language;
+  }
+
+  toggleLanguage(): void {
+    this.languageService.toggle();
+  }
 
   ngAfterViewInit(): void {
     this.initializationTimer = setTimeout(() => this.initializeNavigation(), 0);
