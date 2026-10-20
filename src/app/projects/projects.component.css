@@ -1,5 +1,5 @@
 .projects-section {
-    background: var(--color-ink);
+    background: var(--color-night);
     color: var(--color-text);
     padding: 8rem 2rem;
 }
@@ -65,11 +65,11 @@
     display: grid;
     grid-template-columns: 70px minmax(0, 1fr) minmax(180px, 0.42fr);
     gap: 2rem;
-    min-height: 280px;
+    min-height: 340px;
     padding: 2.4rem;
     overflow: hidden;
     border: 1px solid rgba(244, 247, 251, 0.14);
-    background: var(--color-night);
+    background: var(--color-panel);
     transition: border-color 250ms ease, transform 250ms ease;
 }
 
@@ -79,8 +79,7 @@
 }
 
 .project-card--featured {
-    min-height: 380px;
-    background: linear-gradient(110deg, var(--color-night), #142c48);
+    min-height: 340px;
 }
 
 .project-number {

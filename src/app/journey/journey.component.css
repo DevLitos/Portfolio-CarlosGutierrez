@@ -1,18 +1,62 @@
 .timeline-section {
-  background: var(--color-night);
+  background: var(--color-ink);
   min-height: 100vh;
   padding: 8rem 2rem 7rem;
   position: relative;
 }
 
-.timeline-shell { max-width: 1240px; margin: 0 auto; }
-.journey-heading { display: grid; grid-template-columns: minmax(150px,.35fr) minmax(0,1fr); gap: 3rem; align-items: start; margin-bottom: 5rem; }
-.section-eyebrow { color: var(--color-accent); font-family: var(--font-mono); font-size: .72rem; letter-spacing: .1em; margin: 0; }
-.section-eyebrow span { color: var(--color-muted); margin-right: 1rem; }
-.journey-heading h2 { color: var(--color-text); font-size: clamp(3rem,7vw,6.5rem); letter-spacing: -.07em; line-height: .9; margin: 0; }
-.journey-heading h2 em { color: var(--color-accent); font-style: normal; }
-.journey-lede { max-width: 480px; color: var(--color-muted); line-height: 1.7; margin: 2rem 0 0; }
-.timeline-anchor { display: block; position: relative; top: -7rem; visibility: hidden; }
+.timeline-shell {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.journey-heading {
+  display: grid;
+  grid-template-columns: minmax(150px, .35fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 5rem;
+}
+
+.section-eyebrow {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .1em;
+  margin: 0;
+}
+
+.section-eyebrow span {
+  color: var(--color-muted);
+  margin-right: 1rem;
+}
+
+.journey-heading h2 {
+  color: var(--color-text);
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  letter-spacing: -.07em;
+  line-height: .9;
+  margin: 0;
+}
+
+.journey-heading h2 em {
+  color: var(--color-accent);
+  font-style: normal;
+}
+
+.journey-lede {
+  max-width: 480px;
+  color: var(--color-muted);
+  line-height: 1.7;
+  margin: 2rem 0 0;
+}
+
+.timeline-anchor {
+  display: block;
+  position: relative;
+  top: -7rem;
+  visibility: hidden;
+}
 .timeline {
   position: relative;
   max-width: 1200px;
@@ -84,7 +128,7 @@
 .timeline-card {
   padding: 1.6rem;
   border: 1px solid rgba(244, 247, 251, .14);
-  background: rgba(8, 11, 18, .45);
+  background: var(--color-panel);
   backdrop-filter: blur(10px);
   transition: transform .3s ease;
 }
