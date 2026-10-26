@@ -7,7 +7,7 @@
 .abilities-heading h2 { font-size: clamp(3rem,7vw,6.5rem); letter-spacing: -.07em; line-height: .9; margin: 0; }
 .abilities-heading h2 em { color: var(--color-accent-strong); font-style: normal; }
 .abilities-heading p { max-width: 330px; color: #586579; line-height: 1.7; margin: 0; }
-.abilities-grid { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid #cbd5e1; }
+.abilities-grid { display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid #cbd5e1; }
 .abilities-grid article { min-height: 270px; padding: 2rem 1.5rem 2rem 0; border-right: 1px solid #cbd5e1; }
 .abilities-grid article:not(:first-child) { padding-left: 1.5rem; }
 .abilities-grid article:last-child { border-right: 0; }
@@ -20,7 +20,15 @@
   .abilities-section { padding: 5rem 1rem; }
   .abilities-heading { display: block; margin: 2.5rem 0 3rem; }
   .abilities-heading p { margin-top: 2rem; }
-  .abilities-grid { display: block; }
+  .abilities-grid { grid-template-columns: repeat(2,1fr); }
   .abilities-grid article, .abilities-grid article:not(:first-child) { min-height: 0; padding: 2rem 0; border-right: 0; border-bottom: 1px solid #cbd5e1; }
+  .abilities-grid article:nth-child(odd) { padding-right: 1.5rem; border-right: 1px solid #cbd5e1; }
+  .abilities-grid article:nth-child(even) { padding-left: 1.5rem; }
   .abilities-grid h3 { margin-top: 2rem; }
+}
+@media (max-width: 520px) {
+  .abilities-grid { display: block; }
+  .abilities-grid article,
+  .abilities-grid article:nth-child(odd),
+  .abilities-grid article:nth-child(even) { padding: 2rem 0; border-right: 0; }
 }
